@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_degrade"
+    tools:context=".presentation.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:fontFamily="@font/syncopate"
+        android:text="@string/evgram"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutCadastroUsuario"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutCadastroEmailCadastro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputUsuarioCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lowOpacity"
+            android:hint="@string/nome_de_usu_rio"
+            android:inputType="text"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutCadastroEmailCadastro"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="316dp"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutCadastroUsuario"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEmailCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lowOpacity"
+            android:hint="@string/e_mail"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutCadastroSenha"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutCadastroEmailCadastro">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputSenhaCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lowOpacity"
+            android:hint="@string/senha"
+            android:inputType="textPassword"
+            android:textColor="@color/white" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonCadastrar"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="158dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/cadastrar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCadastroSenha"
+        app:strokeColor="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@color/lightPurple"
+        android:outlineSpotShadowColor="@color/lightPurple"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialButtonCadastrar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

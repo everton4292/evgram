@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "206512168755",
+    "firebase_url": "https://evgram-ae5fb.firebaseio.com",
+    "project_id": "evgram-ae5fb",
+    "storage_bucket": "evgram-ae5fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206512168755:android:306e724600e814c1196846",
+        "android_client_info": {
+          "package_name": "com.everton.evgram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206512168755-kqcgtscbsebdmf3q8udhem47ricva111.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.everton.evgram",
+            "certificate_hash": "06127c2a75a6b8bf50cb74994a1e1deba6a93128"
+          }
+        },
+        {
+          "client_id": "206512168755-vhklaj0c9g1oh8kds75m57f7omkp2g5m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwYLCKzsldImZqKSMYoIUvD48F4-p8cAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206512168755-vhklaj0c9g1oh8kds75m57f7omkp2g5m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
