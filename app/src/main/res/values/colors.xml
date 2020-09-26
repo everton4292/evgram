@@ -6,6 +6,7 @@
     <color name="lightPurple">#670C73</color>
     <color name="white">#FFF</color>
     <color name="grey">#DBDBDB</color>
+    <color name="darkGrey">#444343</color>
     <color name="transparent">#00000000</color>
     <color name="lowOpacity">#1AE7E2E2</color>
     <color name="black">#000000</color>
