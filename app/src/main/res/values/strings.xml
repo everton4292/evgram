@@ -8,4 +8,8 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="nome_de_usu_rio">Nome de Usuário</string>
     <string name="sair">Sair</string>
+    <string name="home">Home</string>
+    <string name="pesquisar">Pesquisar</string>
+    <string name="perfil">Perfil</string>
+    <string name="postagens">Postagens</string>
 </resources>
