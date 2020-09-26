@@ -19,11 +19,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".presentation.MainActivity">
+        <activity android:name=".presentation.MainActivity"
+            android:theme="@style/BlackTheme">
 
         </activity>
 
-        <activity android:name=".presentation.SignupActivity">
+        <activity android:name=".presentation.SignupActivity"
+            android:theme="@style/AppTheme">
 
         </activity>
 
