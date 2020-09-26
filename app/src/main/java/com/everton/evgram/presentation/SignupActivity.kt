@@ -4,17 +4,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isEmpty
 import com.everton.evgram.R
 import com.everton.evgram.model.User
 import com.everton.evgram.util.FirebaseConfiguration
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.*
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import kotlinx.android.synthetic.main.activity_signup.*
-import java.lang.Exception
 
 class SignupActivity : AppCompatActivity() {
 
@@ -24,37 +22,35 @@ class SignupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
-        progressBar.visibility = View.GONE
+        progressBarCadastro.visibility = View.GONE
         materialButtonCadastrar.setOnClickListener {
             if (validateFields()) {
 
                 val user = User(
-                    name = textInputUsuarioCadastro.text.toString()
-                    , email = textInputEmailCadastro.text.toString(),
+                    name = textInputUsuarioCadastro.text.toString(),
+                    email = textInputEmailCadastro.text.toString(),
                     password = textInputSenhaCadastro.text.toString()
                 )
-
                 registerUser(user)
             }
         }
-
     }
 
     fun registerUser(user: User) {
-        progressBar.visibility = View.VISIBLE
+        progressBarCadastro.visibility = View.VISIBLE
         firebaseAuth = FirebaseConfiguration().getFirebaseAuth()
         firebaseAuth.createUserWithEmailAndPassword(
             user.email,
             user.password
         ).addOnCompleteListener { task ->
             if (task.isSuccessful) {
-                progressBar.visibility = View.GONE
+                progressBarCadastro.visibility = View.GONE
                 Toast.makeText(this, "Cadastro com sucesso", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(applicationContext, MainActivity::class.java))
                 finish()
             } else {
                 var error = ""
-                progressBar.visibility = View.GONE
+                progressBarCadastro.visibility = View.GONE
                 try {
                     throw task.exception!!
                 } catch (e: FirebaseAuthWeakPasswordException) {
@@ -67,7 +63,6 @@ class SignupActivity : AppCompatActivity() {
                     error = "ao cadastrar usuário, foi encontrado o erro: " + e.message
                     e.printStackTrace()
                 }
-
                 Toast.makeText(this, "Erro: $error", Toast.LENGTH_LONG).show()
             }
         }
